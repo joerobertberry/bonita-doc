@@ -33,3 +33,10 @@ In order to be compatible with Java 11, you must update the following plug-ins d
 
 The following Bonita dependencies have been upgraded to improve the Java 11 support
 * groovy-all from 2.4.4 to 2.4.16
+
+## Monitoring capabilities
+
+# Engine work execution
+
+A new logger has been added to detect long running work execution.
+Activate it in the logger configuration `BONITA_WORK_AUDIT.EXECUTION`
