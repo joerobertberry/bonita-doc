@@ -12,7 +12,7 @@ This can be achieved using a specific logger called _Work execution audit_
 Enable the logger called `BONITA_WORK_AUDIT.EXECUTION` in the logger configuration.
 
 
-### Activate and configure the logger
+### Activate and configure the work execution audit
 
 In `bonita-tenant-community-custom.properties` set flag `bonita.tenant.work.audit.activated` to `true`
 
@@ -22,7 +22,7 @@ Some properties can be configured
 * `bonita.tenant.work.audit.abnormal.execution.threshold.execution_count`: will trigger a warning if this amount of reschedule is reached
 * `bonita.tenant.work.audit.abnormal.execution.threshold.execution_count_duration_amount`: will not trigger the warning age of work is less than this value
 * `bonita.tenant.work.audit.abnormal.execution.threshold.execution_count_duration_unit`: unit of time in ChronoUnit (SECONDS, MINUTES, HOURS, ...)
-* `bonita.tenant.work.audit.abnormal.execution.threshold.elapsed_duration_since_registration_amount`: will trigger a warning ifif the work age is greater than this amount
+* `bonita.tenant.work.audit.abnormal.execution.threshold.elapsed_duration_since_registration_amount`: will trigger a warning if the work age is greater than this amount
 * `bonita.tenant.work.audit.abnormal.execution.threshold.elapsed_duration_since_registration_unit`: unit of time in ChronoUnit (SECONDS, MINUTES, HOURS, ...)
 
 Example configuration:
