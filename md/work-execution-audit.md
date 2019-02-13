@@ -39,8 +39,15 @@ A _reschedule_ happens when a work can't be executed right now because some othe
 Enable the logger called `BONITA_WORK_AUDIT.EXECUTION` in the logger configuration.
 
 
-#### Example configuration (Wildfly)
-`standalone.xml`
+#### Example configuration ()
+
+##### Tomcat `logging.properties`
+```properties
+# Specific logger for auditing work execution
+BONITA_WORK_AUDIT.EXECUTION.level = INFO 
+```
+
+##### Wildfly `standalone.xml`
 ```xml
             <!-- Specific logger for auditing work execution -->
             <logger category="BONITA_WORK_AUDIT.EXECUTION">
