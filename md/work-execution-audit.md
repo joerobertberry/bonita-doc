@@ -8,7 +8,7 @@ This can be achieved using a specific logger called _Work execution audit_
 
 ### Abnormal work execution
 
-The logger produces a _Warning_ each time a work takes too much time to be executed or it was _rescheduled_ too much times.
+The logger produces a _Warning_ each time a work takes too much time to be executed or it was _rescheduled_ too many times.
 
 Example of warning log produced:
 ```
@@ -19,7 +19,7 @@ Example of warning log produced:
 
 We can wee:
 
-* the type of issue: `TOO_MUCH_EXECUTIONS` OR `TOO_MUCH_TIME_ELAPSED_SINCE_REGISTRATION`
+* the type of issue: `TOO_MANY_EXECUTIONS` OR `TOO_MUCH_TIME_ELAPSED_SINCE_REGISTRATION`
 * information on the work:
   * uuid
   * type
@@ -28,7 +28,7 @@ We can wee:
   * registrationDate: date at which the work was registered
   * abnormalExecutionDetected: if we detected that there might be execution issue on that work
 
-For theses cases it also produce an _Info_ log when the work was finally executed.
+For theses cases it also produces an _Info_ log when the work was finally executed.
 
 A _reschedule_ happens when a work can't be executed right now because some other work already locked the same process instance.
 
@@ -74,7 +74,7 @@ Example configuration:
 # Work execution audit
 # Durations must be ChronoUnit enum values
 bonita.tenant.work.audit.activated=true
-# Too much executions threshold
+# Too many executions threshold
 bonita.tenant.work.audit.abnormal.execution.threshold.execution_count=10
 bonita.tenant.work.audit.abnormal.execution.threshold.execution_count_duration_amount=10
 bonita.tenant.work.audit.abnormal.execution.threshold.execution_count_duration_unit=MINUTES
